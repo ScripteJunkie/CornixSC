@@ -14,7 +14,7 @@ while(True):
 
 @app.route('/')
 def main():
-    return render_template('index.html', data = data)
+    return render_template('index.html', time = time.time(), x = data[0], y = data[1], z = data[2])
 
 if __name__ == '__main__':
    app.run()
