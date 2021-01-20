@@ -19,10 +19,10 @@
 *** See the bottom of this document for the declaration of the reference variables
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
+[![Stargazers][stars-shield]][stars-url] -->
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
@@ -32,24 +32,15 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/github_username/repo_name">
+  <a href="https://static.vecteezy.com/system/resources/thumbnails/000/338/193/small/nf19__28214_29.jpg">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">project_title</h3>
+  <h3 align="center">![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) `*** Work in Progress ***`</h3>
+  <h3 align="center">CornixSC</h3>
 
   <p align="center">
-    project_description
-    <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
-  </p>
+    Cornix is meant to translate the gamespace coordinates of Star Citizen into per planet latitude and longitude, enabling surface vehicle navigation and realtime data for the Daymar Rally. 
 </p>
 
 
@@ -60,9 +51,6 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
@@ -71,7 +59,6 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -85,20 +72,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`github_username`, `repo_name`, `twitter_handle`, `email`, `project_title`, `project_description`
-
-
-### Built With
-
-* []()
-* []()
-* []()
-
-
+CornixSC is here to help aid in the daily use of Star Citizen by allowing for localization within the game world. Cornix uses your gamespace coordinates to calculate your local position on planets and moons. Future development hopes to streamline the data pipeline and allow for realtime compass and analytics for teams and orgs to collaberate in the verse. Our goal is to have a working system to aid in the next [Daymar Rally](https://www.daymarrally.com) or even the [Stanton 7](https://www.stanton7.com). Feel free to join on [Discord](https://discord.gg/zGv9MSkt) to help out.
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -108,7 +82,7 @@ To get a local copy up and running follow these simple steps.
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
-* [AutoHotKey](https://www.autohotkey.com)_
+* [AutoHotKey](https://www.autohotkey.com)
 
 ### Installation
 
@@ -120,26 +94,29 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    pip install -r requirements.txt
    ```
-3. Install Python packages
+3. Run AHK
    ```sh
-   pip install -r requirements.txt
+   autohotkey.exe TEST/ahk/GetCoords.ahk
+   ```
+4. Run Python
+   ```sh
+   python getcoords.py
    ```
 
 
-
-<!-- USAGE EXAMPLES -->
+<!-- USAGE EXAMPLES 
 ## Usage
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
-
+-->
 
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a list of proposed features (and known issues).
+See the [Trello](https://trello.com/b/fvNDfYOe/clientside-todo) for a list of proposed features (and known issues).
 
 
 
@@ -149,9 +126,9 @@ See the [open issues](https://github.com/github_username/repo_name/issues) for a
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
+2. Create your Feature Branch (`git checkout -b feature/GameChanger`)
+3. Commit your Changes (`git commit -m 'Add some GameChanger'`)
+4. Push to the Branch (`git push origin feature/GameChanger`)
 5. Open a Pull Request
 
 
@@ -166,19 +143,13 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email
+Discord - [CornixSC](https://discord.gg/zGv9MSkt)
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
-
-
+Project Link: [https://github.com/ScripteJunkie/CornixSC](https://github.com/ScripteJunkie/CornixSC)
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
-
-* []()
-* []()
-* []()
-
+* [README Template](https://github.com/othneildrew/Best-README-Template)
 
 
 
@@ -194,6 +165,6 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 [issues-shield]: https://img.shields.io/github/issues/github_username/repo.svg?style=for-the-badge
 [issues-url]: https://github.com/github_username/repo/issues
 [license-shield]: https://img.shields.io/github/license/github_username/repo.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo/blob/master/LICENSE.txt
+[license-url]: https://github.com/github_username/repo/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/github_username
+[linkedin-url]: https://linkedin.com/in/ashton-maze-scriptejunkie
