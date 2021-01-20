@@ -33,7 +33,7 @@
 <br />
 <p align="center">
   <a>
-    <img src="https://static.vecteezy.com/system/resources/thumbnails/000/338/193/small/nf19__28214_29.jpg" alt="Logo" width="80" height="80">
+    <img src="https://drive.google.com/file/d/1hjwWcWvJ0hDT0RCSFburULEfSEoHiW9A/view?usp=sharing" alt="Image" width="1280" height="720">
   </a>
 
   <h3 align="center" color="red">*** Work in Progress ***</h3>
