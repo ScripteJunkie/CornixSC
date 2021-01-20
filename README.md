@@ -32,8 +32,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://static.vecteezy.com/system/resources/thumbnails/000/338/193/small/nf19__28214_29.jpg">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a>
+    <img src="https://static.vecteezy.com/system/resources/thumbnails/000/338/193/small/nf19__28214_29.jpg" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center" color="red">*** Work in Progress ***</h3>
