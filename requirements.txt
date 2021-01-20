@@ -1,0 +1,7 @@
+time
+pyperclip
+ctypes
+ahk
+flask
+os
+sys
