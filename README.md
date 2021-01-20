@@ -33,7 +33,7 @@
 <br />
 <p align="center">
   <a>
-    <img src="https://lh3.google.com/u/0/d/1hjwWcWvJ0hDT0RCSFburULEfSEoHiW9A=w1366-h694-iv1" alt="Image" width="1280" height="720">
+    <img src="https://lh6.googleusercontent.com/6RCpTth-vz79Sg9lXBlHlCMemMObP0C-uCi-TYefExmT4gY08WL8t5w0Bcp3jfaIF7JiPS8AZKfvrQ=w1366-h694" alt="Image" width="1280" height="720">
   </a>
 
   <h3 align="center" color="red">*** Work in Progress ***</h3>
