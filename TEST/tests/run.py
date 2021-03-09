@@ -13,10 +13,7 @@ SendInput = ctypes.windll.user32.SendInput
 
 ahk = AHK()
 
-W = 0x11
-A = 0x1E
-S = 0x1F
-D = 0x20
+# 0x11 is w
 
 # C struct redefinitions 
 PUL = ctypes.POINTER(ctypes.c_ulong)
@@ -66,11 +63,12 @@ def ReleaseKey(hexKeyCode):
     ctypes.windll.user32.SendInput(1, ctypes.pointer(x), ctypes.sizeof(x))
 
 def  typeskey(hexKeyCode):
-    ReleaseKey(0x11)
+    #ReleaseKey(0x11)
     PressKey(hexKeyCode)
-    ReleaseKey(0x11)
+    ReleaseKey(0x10)
+    time.sleep(.01)
     ReleaseKey(hexKeyCode)
-    ReleaseKey(0x11)
+    #ReleaseKey(0x11)
     #time.sleep(.1)
 
 BlockInput = ctypes.windll.user32.BlockInput
@@ -96,23 +94,24 @@ class keyboardDisable():
 
 disable = keyboardDisable()
 if __name__ == '__main__':
-    time.sleep(10)
-    BlockInput(True)
-    typeskey(0x1C)
-    time.sleep(.02)
-    typeskey(0x35)
-    typeskey(0x1F)
-    typeskey(0x23)
-    typeskey(0x18)
-    typeskey(0x11)
-    typeskey(0x26)
-    typeskey(0x18)
-    typeskey(0x2E)
-    typeskey(0x1E)
-    typeskey(0x14)
-    typeskey(0x17)
-    typeskey(0x18)
-    typeskey(0x31)
-    time.sleep(.02)
-    typeskey(0x1C)
-    BlockInput(False)
+    while(True):
+        time.sleep(10)
+        BlockInput(True)
+        typeskey(0x1C)
+        time.sleep(.02)
+        typeskey(0x35)
+        typeskey(0x1F)
+        typeskey(0x23)
+        typeskey(0x18)
+        typeskey(0x11)
+        typeskey(0x26)
+        typeskey(0x18)
+        typeskey(0x2E)
+        typeskey(0x1E)
+        typeskey(0x14)
+        typeskey(0x17)
+        typeskey(0x18)
+        typeskey(0x31)
+        time.sleep(.02)
+        typeskey(0x1C)
+        BlockInput(False)
