@@ -1,0 +1,18 @@
+{
+  "name": "cornixclient",
+  "version": "1.0.0",
+  "description": " Cornix is meant to translate the gamespace coordinates of Star Citizen into per planet latitude and longitude, enabling surface vehicle navigation and realtime data for the Daymar Rally.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ScripteJunkie/CornixSC/tree/main/CLIENT"
+  },
+  "keywords": [
+    "star-citizen"
+  ],
+  "author": "scriptejunkie",
+  "license": "SEE LICENSE IN LICENSE"
+}
