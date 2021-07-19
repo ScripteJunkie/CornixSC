@@ -1,0 +1,3 @@
+[submodule "CornixPOI"]
+	path = CornixPOI
+	url = ../../ScripteJunkie/CornixPOI.git
