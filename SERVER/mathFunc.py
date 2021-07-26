@@ -1,11 +1,17 @@
-import os
-import sys
-import math
+from math import sqrt, degrees, asin
 coords = []
 
 def setCoords(coordinates):
     global coords
     coords = coordinates
+
+def clC(number):
+    if 0 < abs(number-int(number)) < 0.0000001:
+        number = float(int(number))
+    if 0 < abs(number-round(number, 6)) < 0.0000001:
+        number = float(int(number) + 1)
+    return number
+
 
 # get distance between points or distance(radius) between given point and solved center (point, center, true)
 def dist(point1, point2, center):
@@ -19,9 +25,9 @@ def dist(point1, point2, center):
 
 # solves hypotenuse and remaing angles given right angle and two sides (length, height)
 def rightSolver(dist, zcoord):
-    c = math.sqrt(dist**2 + zcoord**2)
-    distA = math.degrees(math.asin((c/dist)**-1))
-    distB = math.degrees(math.asin((c/zcoord)**-1))
+    c = sqrt(dist**2 + zcoord**2)
+    distA = degrees(asin((c/dist)**-1))
+    distB = degrees(asin((c/zcoord)**-1))
     return (c, distA, distB)
 
 # solves for midpoint, slope, normal, and both y-intercepts between two points
@@ -40,7 +46,7 @@ def normalSolver(index1, index2):
 
 # returns inner angle of chord given by two points around the known center
 def angSolver(p1, p2, center):
-    angle = 180 - (2 * math.degrees(math.acos(dist(p1, p2, False)/(2 * dist(p1, 0, True)))))
+    angle = 180 - (2 * degrees(asin(dist(p1, p2, False)/(2 * dist(p1, 0, True)))))
     return angle
 
 # gives the average degrees moved per the length of time between data points (assumes 1 minute and divides the output by 60 seconds)

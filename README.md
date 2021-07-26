@@ -40,7 +40,7 @@
   <h3 align="center">CornixSC</h3>
 
   <p align="center">
-    Cornix is meant to translate the gamespace coordinates of Star Citizen into per planet latitude and longitude, enabling surface vehicle navigation and realtime data for the Daymar Rally. 
+    Cornix is meant to translate the gamespace coordinates of Star Citizen into per planet latitude and longitude, enabling surface vehicle navigation and near realtime data for the Daymar Rally. 
 </p>
 
 

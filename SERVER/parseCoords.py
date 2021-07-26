@@ -1,6 +1,6 @@
 import os
 import sys
-import mathFunc
+from mathFunc import setCoords, rotSolver, intersection
 
 def getCoord():
      # writes DaymarEquator.txt into an array
@@ -19,12 +19,12 @@ def getCoord():
      return coords
 
 coords = getCoord()
-mathFunc.setCoords(coords)
+setCoords(coords)
 
 
 # put in data and get everything out
-final = mathFunc.intersection(2, 3, 3, 4)
+final = intersection(2, 3, 3, 4)
 avx = final[0]
 avy = final[1]
 print("Center: ", avx, avy, "~0")
-print("Rotation: ", mathFunc.rotSolver(2, 3, 3, 4), "deg/sec")
+print("Rotation: ", rotSolver(2, 3, 3, 4), "deg/sec")
