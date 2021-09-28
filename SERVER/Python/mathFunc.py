@@ -1,4 +1,5 @@
 from math import sqrt, degrees, asin
+import numpy as np
 coords = []
 
 def setCoords(coordinates):
@@ -15,12 +16,17 @@ def clC(number):
 
 # get distance between points or distance(radius) between given point and solved center (point, center, true)
 def dist(point1, point2, center):
+    a1 = np.array(coords[point1][:3])
     # distance to center
     if center:
-        distance = ((intersection(2, 3, 3, 4)[0] - coords[point1][0])**2 + (intersection(2, 3, 3, 4)[1] - coords[point1][1])**2 + (intersection(2, 3, 3, 4)[2] - coords[point1][2])**2)**0.5
+        a2 = np.array(intersection(2, 3, 3, 4))
+        distance = np.linalg.norm(a2 - a1)
+        #distance = ((intersection(2, 3, 3, 4)[0] - coords[point1][0])**2 + (intersection(2, 3, 3, 4)[1] - coords[point1][1])**2 + (intersection(2, 3, 3, 4)[2] - coords[point1][2])**2)**0.5
     # normal distance
     else:
-        distance = ((coords[point2][0] - coords[point1][0])**2 + (coords[point2][1] - coords[point1][1])**2 + (coords[point2][2] - coords[point1][2])**2)**0.5
+        a2 = np.array(coords[point2][:3])
+        distance = np.linalg.norm(a2 - a1)
+        #distance = ((coords[point2][0] - coords[point1][0])**2 + (coords[point2][1] - coords[point1][1])**2 + (coords[point2][2] - coords[point1][2])**2)**0.5
     return distance
 
 # solves hypotenuse and remaing angles given right angle and two sides (length, height)
@@ -45,17 +51,17 @@ def normalSolver(index1, index2):
     return[slope, normal, midp, yint, Nyint]
 
 # returns inner angle of chord given by two points around the known center
-def angSolver(p1, p2, center):
+def angSolver(p1, p2):
     angle = 180 - (2 * degrees(asin(dist(p1, p2, False)/(2 * dist(p1, 0, True)))))
     return angle
 
 # gives the average degrees moved per the length of time between data points (assumes 1 minute and divides the output by 60 seconds)
 def rotSolver(p1, p2, p3, p4):
     avg = 0
-    A1 = angSolver(p1, p2, intersection(2, 3, 3, 4))
-    A2 = angSolver(p3, p4, intersection(2, 3, 3, 4))
+    A1 = angSolver(p1, p2)
+    A2 = angSolver(p3, p4)
     for i in range(len(coords)-1):
-        avg = avg + angSolver(i, i+1, intersection(2, 3, 3, 4))
+        avg = avg + angSolver(i, i+1)
         #print(coords[i+1][3]-coords[i][3]) # 100 represents 1 minute
     rot = avg/(len(coords)-1)/60 # deg/sec
     return rot

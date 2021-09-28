@@ -1,5 +1,5 @@
 from jsonWiz import getCoords
-from mapCoords import planetLoc
+from mapCoords import planetLoc, coordSolver
 coords = []
 
 # Daymar Rally: Shubin SCO-1 => Eager Flats => Kudre Ore

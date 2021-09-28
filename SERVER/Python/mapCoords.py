@@ -34,3 +34,8 @@ def coordSolver(angle, origin):
         theta -= 360
     newCoord = [clC(radius * sin(radians(theta))), clC(radius * cos(radians(theta))), origin[2]]
     return newCoord
+
+# gets lat, lon from game coordinates
+def coordsCart(coord, meridian):
+    planetLoc(coord)
+    return 
