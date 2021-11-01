@@ -10,22 +10,23 @@ const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 ); 
 const renderer = new THREE.WebGLRenderer({ alpha: true }); 
 
-var light = new THREE.DirectionalLight( 0xffffff );
-light.position.set( 0, 1, 1 ).normalize();
+// var light = new THREE.DirectionalLight( 0xffffff );
+// light.position.set( 0, 1, 1 ).normalize();
+const light = new THREE.HemisphereLight( 0xffffbb, 0x080820, 1 );
 scene.add(light);
 
-// scene.add(new THREE.AmbientLight(0x404040))
+scene.add(new THREE.AmbientLight(0x404040))
 
-var geometry = new THREE.SphereGeometry(0.5, 32, 32);
+var geometry = new THREE.SphereGeometry(1, 32, 32);
 var material = new THREE.MeshPhongMaterial()
 var earthMesh = new THREE.Mesh(geometry, material);
-camera.position.z = 1;
+camera.position.z = 2;
 
 const controls = new OrbitControls( camera, renderer.domElement );
 
 //controls.update() must be called after any manual changes to the camera's transform
-camera.position.set( 0, 20, 100 );
-controls.update();
+//camera.position.set( 0, 20, 100 );
+//controls.update();
 
 function animate() {
 
@@ -80,5 +81,5 @@ scene.add(mesh);
 scene.add(earthMesh);
 
 renderer.setSize( window.innerWidth, window.innerHeight ); 
-renderer.setClearColor( 0x000000, 0 );
+// renderer.setClearColor( 0x000000, 0 );
 document.body.appendChild( renderer.domElement ); 
