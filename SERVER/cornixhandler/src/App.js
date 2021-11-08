@@ -149,7 +149,7 @@ class App extends Component {
             }
             // camera.lookAt( intersects[ 0 ] );
           }
-        window.addEventListener( 'click', onMouseDown );
+        window.addEventListener( 'click', onMouseDown );r
     }
 
     render() {
