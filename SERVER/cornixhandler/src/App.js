@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import * as THREE from "three";
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
 
+
 import earthmap1k from './assets/earthmap1k.jpg';
 import earthbump1k from './assets/earthbump1k.jpg';
 import earthspec1k from './assets/earthspec1k.jpg';
@@ -30,6 +31,7 @@ class App extends Component {
         renderer.setSize( window.innerWidth, window.innerHeight );
         this.mount.appendChild( renderer.domElement );
         
+        // Stanton
         var geometrySun = new THREE.SphereGeometry(5, 64, 64);
         var materialSun = new THREE.MeshStandardMaterial({
           color: new THREE.Color(0xffe6a1),
@@ -40,6 +42,7 @@ class App extends Component {
         var sunMesh = new THREE.Mesh(geometrySun, materialSun);
         scene.add(sunMesh);
 
+        // Arccorp
         var geometryEarth = new THREE.SphereGeometry(0.5, 64, 64);
         var materialEarth = new THREE.MeshPhongMaterial()
         var earthMesh = new THREE.Mesh(geometryEarth, materialEarth);
