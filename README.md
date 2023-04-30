@@ -4,7 +4,7 @@
     <img src="https://i.ibb.co/6Z859hM/Screen-Shot0119.jpg" width="640">
   </a>
 
-  <h3 align="center" color="red"> Unfortunately do to a lack of time and issues with the new anti-cheat, I have been unable to continue with the prject.</h3>
+  <h3 align="center" color="red"> Unfortunately do to a lack of time and issues with the new anti-cheat, I have been unable to continue with the project. I'll continue to play with solutions but no further work will be done for now.</h3>
   <h3 align="center">CornixSC</h3>
 
   <p align="center">
